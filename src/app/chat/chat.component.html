@@ -1,0 +1,85 @@
+<!--<div class="image">
+	<div class="menu">
+		jfhdjfhdjkfh
+	</div>
+</div>-->
+
+<div class="chat">
+	<div class="container">
+		<div class="conversation" #conversation>
+			<div *ngIf="text" [@flyInOut]="'in'" class="animation">
+				<div class="res">
+					<div class="avatar"></div>
+					<div class="bot-box" item-height="50px">
+
+						<div *ngIf="!showText" class="typing-container">
+							<div class="typing-indicator"></div>
+							<div class="typing-indicator"></div>
+							<div class="typing-indicator"></div>
+						</div>
+						<div *ngIf="showText" class="showText"> {{ showText }}</div>
+					</div>
+				</div>
+				<div *ngIf="!listOfResults[k] && question" class="result">
+					<div class="typing-container">
+						<div class="typing-indicator"></div>
+						<div class="typing-indicator"></div>
+						<div class="typing-indicator"></div>
+					</div>
+				</div>
+			</div>
+			<div *ngIf="showText" [@flyInOut]="'in'" class="animation">
+				<div class="res">
+					<div class="avatar"></div>
+					<div class="bot-box ">
+						<div *ngIf="!showText2" class="typing-container">
+							<div class="typing-indicator"></div>
+							<div class="typing-indicator"></div>
+							<div class="typing-indicator"></div>
+						</div>
+						<div *ngIf="showText" class="showText"> {{ showText2 }}</div>
+					</div>
+				</div>
+				<div *ngIf="!listOfResults[k] && question" class="result">
+					<div class="typing-container">
+						<div class="typing-indicator"></div>
+						<div class="typing-indicator"></div>
+						<div class="typing-indicator"></div>
+					</div>
+				</div>
+
+
+
+			</div>
+			<div *ngFor="let question of listOfQuestions; let k = index; let l = last" class="section">
+				<div *ngIf="question" class="askedQuestion">{{ question }}</div>
+
+				<div class="res">
+					<div class="avatar"></div>
+					<div class="bot-box">
+						<div *ngIf="!listOfResults[k] && question">
+								<div class="typing-container ">
+									<div class="typing-indicator"></div>
+									<div class="typing-indicator"></div>
+									<div class="typing-indicator"></div>
+								</div>
+							</div>
+						<div *ngIf='listOfResults[k]' class="showText">
+							
+							<div *ngIf='listOfResults[k]'>
+								{{ listOfResults[k] }}
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div *ngIf="showText2" class="question">
+		<form #questions="ngForm">
+			<input autocomplete="off" [(ngModel)]="newQuestion" name="newQuestion" placeholder="Question" autofocus>
+			<button class="ask" type="submit" (click)="askQuestion(questions.value)">Ask me</button>
+		</form>
+	</div>
+</div>
