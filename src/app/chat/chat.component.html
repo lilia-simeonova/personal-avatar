@@ -31,13 +31,13 @@
 			<div *ngIf="showText" [@flyInOut]="'in'" class="animation">
 				<div class="res">
 					<div class="avatar"></div>
-					<div class="bot-box ">
+					<div class="bot-box" item-height="50px">
 						<div *ngIf="!showText2" class="typing-container">
 							<div class="typing-indicator"></div>
 							<div class="typing-indicator"></div>
 							<div class="typing-indicator"></div>
 						</div>
-						<div *ngIf="showText" class="showText"> {{ showText2 }}</div>
+						<div *ngIf="showText2" class="showText"> {{ showText2 }}</div>
 					</div>
 				</div>
 				<div *ngIf="!listOfResults[k] && question" class="result">

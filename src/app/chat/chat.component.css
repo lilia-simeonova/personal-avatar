@@ -2,7 +2,7 @@ body { overflow-x: hidden; }
 
 .chat {
   max-width: 700px;
-  min-width: 600px;
+  min-width: 300px;
   /*height: 650px;*/
   /*margin: 5% auto; */ 
   /*border: 2px solid #e1e1e1;*/
@@ -12,7 +12,7 @@ body { overflow-x: hidden; }
   margin-bottom: 10px;
   /*overflow: auto;*/
   float:left;
-  margin-left:100px;
+  margin-left:10%;
 }
 
 .header {
@@ -20,14 +20,22 @@ body { overflow-x: hidden; }
   padding: 1px 20px;
   color: #fff;
 }
+@media only screen and (max-width: 500px) {
+  .question input {
 
+    max-width: 200px;
+    margin-left: 10px!important;
+    }
+}
 .question input {
-padding: 5px;
+    padding: 5px;
     margin: 15px 0px;
     width: 400px;
+    font-family: cursive;
     padding: 20px;
     min-width: 48px;
     margin-left: 60px;
+    margin-right: 1%;
 }
 /*.container {
   background-color: #A0A0A0;
@@ -60,6 +68,7 @@ padding: 5px;
   width: 95px;
   text-align: center;
   padding: 20px;
+  font-family: cursive;
   cursor: pointer;
 }
 .typing-container {
@@ -257,6 +266,7 @@ button:focus {
   height: 400px;
   background: dodgerblue;
   opacity: 0.5;
+
   filter: alpha(opacity=50)
 
 }
@@ -280,8 +290,8 @@ button:focus {
 }
 .res {
   float: left;
-  width: 600px;
-  display: inline-flex
+  display: inline-flex;
+  width: 100%;
 }
 .typing-container-res {
   padding: 0px;
