@@ -30,7 +30,7 @@ body { overflow-x: hidden; }
 .question input {
     padding: 5px;
     margin: 15px 0px;
-    width: 400px;
+    width: 60%;
     font-family: cursive;
     padding: 20px;
     min-width: 48px;
@@ -63,6 +63,7 @@ body { overflow-x: hidden; }
   margin-left: 70px;
   border-radius: 20px 20px 20px 20px;
   padding:20px;
+  margin-bottom: 25px;
 }
 .ask {
   width: 95px;
